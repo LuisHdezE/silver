@@ -2,7 +2,8 @@
 
 API para el control de los productos de un inventario, los cuales ingresan por facturas de compraa proveedores y se rebajan con movimientos de venta o ajuste de inventario.
 
-## Documentación
+## Documentación de la API
+
 La documentación de la API se encuentra disponible en Swagger, en el siguiente enlace:
 
 ```https://<url_de_la_api>/api-docs```
@@ -21,10 +22,9 @@ Si las credenciales son válidas, se recibirá un token de autenticación en la 
 
 Para acceder a las rutas que requieren autenticación, se debe incluir el token en el encabezado (header) de la petición con la siguiente estructura:
 
-```Authorization: Bearer <token>
+Authorization: Bearer token
 Instalación y configuración
 Clonar el repositorio de SILVER API.
-```
 
 Ejecutar npm install para instalar las dependencias.
 
@@ -32,15 +32,14 @@ Crear una base de datos en MySQL y configurar las credenciales de acceso en el a
 
 Ejecutar las migraciones y los seeders para crear la estructura de la base de datos y llenarla con datos de prueba. Para ello, ejecutar los siguientes comandos:
 
-```npx sequelize-cli db:migrate
-npx sequelize-cli db:seed:all 
-```
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+
 Iniciar el servidor con el comando npm start.
 
+## Rutas disponibles
 
-### Rutas disponibles
-
-#### Categorías
+### Categorías
 
 - GET /categorias: devuelve la lista de categorías.
 - GET /categorias/:codigo: devuelve los datos de una categoría específica.
@@ -48,7 +47,7 @@ Iniciar el servidor con el comando npm start.
 - PUT /categorias/:codigo: actualiza los datos de una categoría existente.
 - DELETE /categorias/:codigo: elimina una categoría existente.
 
-#### Productos
+### Productos
 
 - GET /productos: devuelve la lista de productos.
 - GET /productos/:codigo: devuelve los datos de un producto específico.
@@ -56,7 +55,7 @@ Iniciar el servidor con el comando npm start.
 - PUT /productos/:codigo: actualiza los datos de un producto existente.
 - DELETE /productos/:codigo: elimina un producto existente.
 
-#### Facturas
+### Facturas
 
 GET /facturas: devuelve la lista de facturas.
 GET /facturas/:numero: devuelve los datos de una factura específica.
@@ -64,7 +63,7 @@ POST /facturas: crea una nueva factura.
 PUT /facturas/:numero: actualiza los datos de una factura existente.
 DELETE /facturas/:numero: elimina una factura existente.
 
-Movimientos
+### Movimientos
 
 GET /movimientos: devuelve la lista de movimientos.
 GET /movimientos/:id: devuelve los datos de un movimiento específico.
@@ -119,4 +118,4 @@ Realiza los cambios necesarios.
 Hacer un commit de los cambios (git commit -am "Añadida nueva funcionalidad").
 Sube los cambios a tu repositorio (git push origin nueva-funcionalidad).
 Haz una pull request desde tu fork a este repositorio.
-Espera a que alguien del equipo revise tu pull request y la apruebe o sugiera cambios.
+Espera a que alguien del equipo revise tu pull request y la apruebe o sugiera cambios
